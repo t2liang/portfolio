@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacts Page </title>
+</head>
+<h1> Contact </h1>
+<body>
+    <form> </form>
+    <nav> 
+        <a href="contact/index.html">Contact!</a>
+        <a href="projects/index.html">Projects</a>
+        <a href="index.html">Home </a>
+        <a href="https://github.com/t2liang" target="_blank">Profile</a>
+    </nav>
+
+    <form action="mailto:t2liang@ucsd.edu" method="POST" enctype="text/plain">
+        <!-- Sender's Email -->
+        <label>
+          Email:
+          <input type="email" name="email" required>
+        </label>
+    
+        <!-- Subject -->
+        <label>
+          Subject:
+          <input type="text" name="subject" required>
+        </label>
+    
+        <!-- Message -->
+        <label>
+          Message:
+          <textarea name="body" rows="5" required></textarea>
+        </label>
+    
+        <!-- Submit Button -->
+        <button>Submit</button>
+      </form>
+    
+</body>
+</html>
