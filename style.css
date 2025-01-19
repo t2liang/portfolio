@@ -3,7 +3,7 @@ body {
          and use the OS’s UI font as the website font
        */
     font: 100%/1.5 system-ui;
-    max-width: 100ch;
+    max-width: 60ch;
     padding: 1rem;
     margin-inline: max(1em, (100% - 100ch) / 2);
   }
@@ -23,4 +23,27 @@ nav {
     background-color: #f4f4f4; /* Light background */
     border: 1px solid #ccc; /* Optional: Add a border for structure */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add subtle shadow */
+}
+
+/* Links inside the navigation */
+nav a {
+    flex: 1; /* Make each link take up equal space */
+    text-decoration: none; /* Remove underline from links */
+    padding: 0.5rem 1rem; /* Add padding for larger click targets */
+    text-align: center; /* Center-align text */
+    color: #333; /* Default text color */
+    transition: color 0.3s, background-color 0.3s; /* Smooth hover effects */
+}
+
+/* Hover effects for links */
+nav a:hover {
+    background-color: #e0e0e0; /* Light gray background on hover */
+    color: #000; /* Darker text color */
+}
+
+/* Highlight the current page */
+nav a.current {
+    background-color: #007acc; /* Highlight color */
+    color: white; /* Contrast text color */
+    font-weight: bold; /* Make it stand out */
 }
