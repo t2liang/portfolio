@@ -18,7 +18,7 @@ nav ul li {
 nav {
     display: flex; /* Enable Flexbox */
     justify-content: space-around; /* Spread items evenly with space in between */
-    max-width: 60ch; /* Limit the width for readability */
+    max-width: 80ch; /* Limit the width for readability */
     margin-inline: auto; /* Center the navigation bar */
     padding: 1rem; /* Add spacing inside the navigation */
     background-color: #f4f4f4; /* Light background */
@@ -38,7 +38,8 @@ nav a {
 
 /* Hover effects for links */
 nav a:hover {
-    background-color: #e0e0e0; /* Light gray background on hover */
+    background-color: #f9b0df; 
+    border-bottom: 0.4em #f9b0df;
     color: #000; /* Darker text color */
 }
 
