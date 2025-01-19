@@ -3,9 +3,10 @@ body {
          and use the OS’s UI font as the website font
        */
     font: 100%/1.5 system-ui;
-    max-width: 60ch;
+    max-width: 80ch;
     padding: 1rem;
-    margin-inline: max(1em, (100% - 100ch) / 2);
+    margin-inline: auto;
+    line-height: 1.6;
   }
 nav ul,
 nav ul li {
@@ -22,8 +23,6 @@ nav {
     margin-inline: auto; /* Center the navigation bar */
     padding: 1rem; /* Add spacing inside the navigation */
     background-color: #f4f4f4; /* Light background */
-    border: 1px solid #ccc; /* Optional: Add a border for structure */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add subtle shadow */
     margin-bottom: 1em; /* Add space below the navigation bar */
     border-bottom: 1px solid oklch(80% 3% 200); /* Cool gray bottom border */
 }
@@ -46,6 +45,7 @@ nav a:hover {
 
 /* Highlight the current page */
 nav a.current {
+    border-bottom: 0.4em solid var(--color-accent);
     background-color: #007acc; /* Highlight color */
     color: white; /* Contrast text color */
     font-weight: bold; /* Make it stand out */
