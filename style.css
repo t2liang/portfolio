@@ -24,6 +24,8 @@ nav {
     background-color: #f4f4f4; /* Light background */
     border: 1px solid #ccc; /* Optional: Add a border for structure */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add subtle shadow */
+    margin-bottom: 1em; /* Add space below the navigation bar */
+    border-bottom: 1px solid oklch(80% 3% 200); /* Cool gray bottom border */
 }
 
 /* Links inside the navigation */
