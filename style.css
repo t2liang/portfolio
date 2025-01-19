@@ -21,7 +21,7 @@ nav {
     max-width: 100ch; /* Limit the width for readability */
     margin-inline: auto; /* Center the navigation bar */
     padding: 1rem; /* Add spacing inside the navigation */
-    background-color: #f4f4f4; /* Light background */
+    background-color: #fff9f9; /* Light background */
     margin-bottom: 1em; /* Add space below the navigation bar */
     border-bottom: 1px solid oklch(80% 3% 200); /* Cool gray bottom border */
 }
