@@ -18,7 +18,6 @@ nav ul li {
 nav {
     display: flex; /* Enable Flexbox */
     justify-content: space-around; /* Spread items evenly with space in between */
-    align-items: center; /* Vertically center items */
     max-width: 60ch; /* Limit the width for readability */
     margin-inline: auto; /* Center the navigation bar */
     padding: 1rem; /* Add spacing inside the navigation */
@@ -45,8 +44,8 @@ nav a:hover {
 
 /* Highlight the current page */
 nav a.current {
-    border-bottom: 0.4em solid var(--color-accent);
-    background-color: #007acc; /* Highlight color */
-    color: white; /* Contrast text color */
-    font-weight: bold; /* Make it stand out */
+    border-bottom: 0.4em solid oklch(80% 3% 200); /* Thick bottom border in cool gray or lighter version */
+    color: #007acc; /* Set current link text color */
+    font-weight: bold; /* Make the current link stand out */
+    padding-bottom: calc(0.5em - 0.4em);
 }
