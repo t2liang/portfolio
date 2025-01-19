@@ -10,6 +10,7 @@ body {
 nav ul,
 nav ul li {
     display: contents; /* Removes styling but keeps semantic structure */
+    list-style: none;
     margin: 0;
     padding: 0;
 }
