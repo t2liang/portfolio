@@ -122,13 +122,13 @@ form button:hover {
 
 /* Step 4.4: Finishing touches - heading styling */
 h1 {
-    font-size: 3em; /* Make h1 much larger than body text */
+    font-size: 2.5em; /* Make h1 much larger than body text */
     line-height: 1.1; /* Tighten line height for h1 */
     text-wrap: balance; /* Prevent uneven lines */
 }
 
 h2 {
-    font-size: 2em; /* Increase contrast between h1 and h2 */
+    font-size: 1.75em; /* Increase contrast between h1 and h2 */
     line-height: 1.1; /* Tighten line height for h2 */
     text-wrap: balance; /* Prevent uneven lines */
 }
