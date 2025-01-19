@@ -98,3 +98,50 @@ form button {
 form button:hover {
     background-color: #005fa3; /* Darker background on hover */
 }
+
+/* Step 4.2: Applying a responsive grid */
+.projects {
+    display: grid; /* Apply grid layout */
+    grid-template-columns: repeat(auto-fill, minmax(15em, 1fr)); /* Flexible columns */
+    gap: 1em; /* Space between grid items */
+    margin: 2rem 0; /* Optional: Add space around the grid */
+}
+
+/* Step 4.3: Horizontal alignment with subgrid */
+.projects article {
+    display: grid; /* Make each article a grid container */
+    grid-template-rows: subgrid; /* Use subgrid for aligning article content */
+    gap: 1em; /* Space between content within each article */
+    grid-row: span 3; /* Make the article span 3 rows */
+}
+
+.projects article h2 {
+    margin: 0; /* Remove excessive margin around the heading */
+    font-size: 2em; /* Adjust size of h2 */
+}
+
+/* Step 4.4: Finishing touches - heading styling */
+h1 {
+    font-size: 4em; /* Make h1 much larger than body text */
+    line-height: 1.1; /* Tighten line height for h1 */
+    text-wrap: balance; /* Prevent uneven lines */
+}
+
+h2 {
+    font-size: 2.5em; /* Increase contrast between h1 and h2 */
+    line-height: 1.1; /* Tighten line height for h2 */
+    text-wrap: balance; /* Prevent uneven lines */
+}
+
+/* Apply defaults for all headings (h1, h2, h3, h4, h5, h6) */
+h1, h2, h3, h4, h5, h6 {
+    line-height: 1.1; /* Consistent line-height */
+    text-wrap: balance; /* Prevent uneven lines */
+    margin: 0.5em 0; /* Add space before and after headings */
+}
+
+/* Optional: Image styling inside articles to ensure alignment */
+.projects article img {
+    max-width: 100%; /* Ensure images fit within their container */
+    height: auto; /* Maintain aspect ratio */
+}
