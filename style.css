@@ -3,7 +3,7 @@ body {
          and use the OS’s UI font as the website font
        */
     font: 100%/1.5 system-ui;
-    max-width: 80ch;
+    max-width: 100ch;
     padding: 1rem;
     margin-inline: auto;
     line-height: 1.6;
@@ -18,7 +18,7 @@ nav ul li {
 nav {
     display: flex; /* Enable Flexbox */
     justify-content: space-around; /* Spread items evenly with space in between */
-    max-width: 80ch; /* Limit the width for readability */
+    max-width: 100ch; /* Limit the width for readability */
     margin-inline: auto; /* Center the navigation bar */
     padding: 1rem; /* Add spacing inside the navigation */
     background-color: #f4f4f4; /* Light background */
@@ -49,4 +49,52 @@ nav a.current {
     color: #007acc; /* Set current link text color */
     font-weight: bold; /* Make the current link stand out */
     padding-bottom: calc(0.5em - 0.4em);
+}
+
+/* Apply grid layout to the form */
+form {
+    font: inherit; /* Inherit the font style from the body */
+    display: grid; /* Enable grid layout for the form */
+    grid-template-columns: auto 1fr; /* Two columns: auto-sized for labels, 1fr for input fields */
+    gap: 1rem; /* Add spacing between rows and columns */
+    width: 100%;
+    max-width: 80ch; /* Optional: limit form width for readability */
+    margin-inline: auto; /* Center the form */
+    padding: 1rem;
+}
+
+/* Label styling for grid layout */
+form label {
+    display: grid; /* Make each label its own grid container */
+    grid-template-columns: subgrid; /* Use subgrid to align with the parent grid */
+    font-weight: bold; /* Make labels bold for clarity */
+    grid-column: 1 / -1; /* Make the label span across both columns */
+}
+
+/* Input, textarea, and select controls inside the form */
+form input, form textarea, form select {
+    width: 100%; /* Make the form controls take up the full width of their grid cell */
+    padding: 0.75em; /* Add some padding for better readability */
+    box-sizing: border-box; /* Include padding and border in the width calculation */
+    font-size: inherit; /* Ensure font size matches the rest of the page */
+    margin-bottom: 1rem; /* Add spacing between controls */
+    grid-column: 2; /* Place the input fields in the second column */
+}
+
+/* Styling the submit button */
+form button {
+    font: inherit; /* Make sure the button uses the same font as the rest of the page */
+    padding: 1em 2em; /* Add padding for larger click targets */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    background-color: #007acc; /* Button background color */
+    color: white; /* Button text color */
+    border: none; /* Remove border */
+    border-radius: 0.5em; /* Rounded corners */
+    transition: background-color 0.3s; /* Smooth transition on hover */
+    grid-column: 1 / -1; /* Make the button span across both columns */
+}
+
+/* Button hover effect */
+form button:hover {
+    background-color: #005fa3; /* Darker background on hover */
 }
