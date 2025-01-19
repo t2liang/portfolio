@@ -122,13 +122,13 @@ form button:hover {
 
 /* Step 4.4: Finishing touches - heading styling */
 h1 {
-    font-size: 4em; /* Make h1 much larger than body text */
+    font-size: 3em; /* Make h1 much larger than body text */
     line-height: 1.1; /* Tighten line height for h1 */
     text-wrap: balance; /* Prevent uneven lines */
 }
 
 h2 {
-    font-size: 2.5em; /* Increase contrast between h1 and h2 */
+    font-size: 2em; /* Increase contrast between h1 and h2 */
     line-height: 1.1; /* Tighten line height for h2 */
     text-wrap: balance; /* Prevent uneven lines */
 }
@@ -144,4 +144,30 @@ h1, h2, h3, h4, h5, h6 {
 .projects article img {
     max-width: 100%; /* Ensure images fit within their container */
     height: auto; /* Maintain aspect ratio */
+}
+
+
+/* Resume container */
+.resume {
+    display: grid;
+    grid-template-columns: 1fr 3fr; /* Left column for contact and profile, right column for content */
+    gap: 2rem;
+    max-width: 80ch;
+    margin-top: 2rem;
+}
+
+/* Styling for lists of skills, experience, education, etc. */
+.resume ul {
+    padding-left: 1.5em; /* Indent list items */
+    list-style-type: disc;
+}
+
+.resume li {
+    margin-bottom: 0.5em;
+    font-size: 1.1em;
+}
+
+/* Experience, Education, Skills, and other sections */
+.resume .section {
+    margin-bottom: 2rem;
 }
