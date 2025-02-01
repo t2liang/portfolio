@@ -11,7 +11,7 @@ let pages = [
   { url: '/portfolio/', title: 'Home' },
   { url: '/portfolio/projects/', title: 'Projects' },
   { url: '/portfolio/contact/', title: 'Contact'},
-  { url: '/portfolio/resume/', title: 'resume'}
+  { url: '/portfolio/resume.html', title: 'resume'}
   // add the rest of your pages here
 ];
 
