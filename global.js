@@ -55,7 +55,13 @@ const select = document.querySelector('.color-scheme select');
 if ('colorScheme' in localStorage) {
     // Apply the saved color scheme
     document.documentElement.style.setProperty('color-scheme', localStorage.colorScheme);
-  
+    document.documentElement.classList.remove('light-mode', 'dark-mode');
+  if (scheme === 'light') {
+    document.documentElement.classList.add('light-mode');
+  } else if (scheme === 'dark') {
+    document.documentElement.classList.add('dark-mode');
+  }
+
     // Update the <select> element to match
     select.value = localStorage.colorScheme;
   }
