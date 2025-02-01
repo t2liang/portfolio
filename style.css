@@ -1,3 +1,22 @@
+.color-scheme {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 80%;
+  font-family: inherit; /* Inherit the font from the parent */
+}
+
+/* Style the <select> element */
+.color-scheme select {
+  background-color: transparent;
+  border: 1px solid var(--border-color);
+  color: canvastext;
+  padding: 3px;
+  border-radius: 3px;
+  font-size: inherit; /* Inherit the font size from the parent */
+}
+
+  
 body {
     /* Set line height to 1.5 times the font size
          and use the OS’s UI font as the website font
@@ -24,10 +43,12 @@ nav {
     background-color: #fff9f9; /* Light background */
     margin-bottom: 1em; /* Add space below the navigation bar */
     border-bottom: 1px solid oklch(80% 3% 200); /* Cool gray bottom border */
+    --border-color: oklch(50% 10% 200 / 40%);
 }
 
 /* Links inside the navigation */
 nav a {
+    border-bottom: 2px solid var(--border-color);
     flex: 1; /* Make each link take up equal space */
     text-decoration: none; /* Remove underline from links */
     padding: 0.5rem 1rem; /* Add padding for larger click targets */
@@ -38,7 +59,7 @@ nav a {
 
 /* Hover effects for links */
 nav a:hover {
-    background-color: #f9b0df; 
+    background-color: color-mix(in oklch, var(--color-accent), canvas 85%);
     border-bottom: 0.4em #f9b0df;
     color: #000; /* Darker text color */
 }
