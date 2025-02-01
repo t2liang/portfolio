@@ -8,10 +8,10 @@ const navLinks = $$("nav a");
 
 const ARE_WE_HOME = document.documentElement.classList.contains('home');
 let pages = [
-  { url: '', title: 'Home' },
-  { url: 'projects/index.html', title: 'Projects' },
-  { url: 'contact/index.html', title: 'Contact'},
-  { url: 'resume.html', title: 'resume'}
+  { url: '/portfolio/', title: 'Home' },
+  { url: '/portfolio/projects/index.html', title: 'Projects' },
+  { url: '/portfolio/contact/index.html', title: 'Contact'},
+  { url: '/portfolio/resume.html', title: 'resume'}
   // add the rest of your pages here
 ];
 
