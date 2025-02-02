@@ -100,12 +100,7 @@ export function renderProjects(project, containerElement, headingLevel = 'h2') {
     containerElement.innerHTML = '';
     const projectsTitle = document.querySelector('.projects-title');
 
-    // Update the <h1> element with the number of projects
-    if (projectsTitle) {
-      projectsTitle.textContent = `Projects (${projects.length})`;
-    } else {
-      console.error("Element with class 'projects-title' not found.");
-    }
+    
 
     // Loop through each project in the array
     project.forEach(proj => {
