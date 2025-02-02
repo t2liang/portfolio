@@ -95,15 +95,18 @@ export async function fetchJSON(url) {
     }
 }
 
-export function renderProjects(project, containerElement, headingLevel = 'h2') {
+export function renderProjects(projects, containerElement, headingLevel = 'h2') {
     // Your code will go here
     containerElement.innerHTML = '';
     const projectsTitle = document.querySelector('.projects-title');
 
-    
+    // Update projects title with the count of projects
+    if (projectsTitle) {
+        projectsTitle.textContent = `Projects (${projects.length})`;
+    }
 
     // Loop through each project in the array
-    project.forEach(proj => {
+    projects.forEach(proj => {
     // Create a new <article> element for each project
         const article = document.createElement('article');
 
