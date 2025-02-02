@@ -96,6 +96,15 @@ export async function fetchJSON(url) {
 export function renderProjects(project, containerElement, headingLevel = 'h2') {
     // Your code will go here
     containerElement.innerHTML = '';
+    const projectsTitle = document.querySelector('.projects-title');
+
+    // Update the <h1> element with the number of projects
+    if (projectsTitle) {
+      projectsTitle.textContent = `Projects (${projects.length})`;
+    } else {
+      console.error("Element with class 'projects-title' not found.");
+    }
+
     // Loop through each project in the array
     project.forEach(project => {
     // Create a new <article> element for each project
