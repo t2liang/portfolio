@@ -210,3 +210,21 @@ h1, h2, h3, h4, h5, h6 {
 html {
     color-scheme: light dark;
   }
+
+.github-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Four equal columns */
+    gap: 10px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.github-stats dt {
+    font-weight: bold;
+    grid-row: 1; /* Place all dt (labels) in the first row */
+}
+
+.github-stats dd {
+    margin: 0;
+    grid-row: 2; /* Place all dd (values) in the second row */
+}
