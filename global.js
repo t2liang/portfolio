@@ -51,20 +51,22 @@ document.body.insertAdjacentHTML(
   // Add event listener to the dropdown
 const select = document.querySelector('.color-scheme select');
   
-// Check if a color scheme preference is saved in localStorage
-if ('colorScheme' in localStorage) {
+if (localStorage.colorScheme) {
+    const scheme = localStorage.colorScheme; // Define scheme
+
     // Apply the saved color scheme
-    document.documentElement.style.setProperty('color-scheme', localStorage.colorScheme);
+    document.documentElement.style.setProperty('color-scheme', scheme);
     document.documentElement.classList.remove('light-mode', 'dark-mode');
-  if (scheme === 'light') {
-    document.documentElement.classList.add('light-mode');
-  } else if (scheme === 'dark') {
-    document.documentElement.classList.add('dark-mode');
-  }
+
+    if (scheme === 'light') {
+        document.documentElement.classList.add('light-mode');
+    } else if (scheme === 'dark') {
+        document.documentElement.classList.add('dark-mode');
+    }
 
     // Update the <select> element to match
-    select.value = localStorage.colorScheme;
-  }
+    select.value = scheme;
+}
   
   // Add an input event listener
 select.addEventListener('input', function (event) {
