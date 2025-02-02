@@ -106,18 +106,18 @@ export function renderProjects(project, containerElement, headingLevel = 'h2') {
     }
 
     // Loop through each project in the array
-    project.forEach(project => {
+    project.forEach(proj => {
     // Create a new <article> element for each project
-    const article = document.createElement('article');
+        const article = document.createElement('article');
 
     // Populate the <article> with project details
-    article.innerHTML = `
-      <h3>${project.title}</h3>
-      <img src="${project.image}" alt="${project.title}">
-      <p>${project.description}</p>
-    `;
+        article.innerHTML = `
+        <h3>${project.title}</h3>
+        <img src="${project.image}" alt="${project.title}">
+        <p>${project.description}</p>
+        `;
 
-    // Append the <article> to the container
-    containerElement.appendChild(article);
-  });
+        // Append the <article> to the container
+        containerElement.appendChild(article);
+    });
 }
