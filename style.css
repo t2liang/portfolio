@@ -237,7 +237,7 @@ html {
   }
 
 .legend {
-  display: grid;
+  display: flex;
   grid-template-columns: repeat(auto-fill, minmax(9em, 1fr));
   gap: 0.5em; /* Spacing between legend items */
   list-style: none; /* Remove default list styling */
@@ -260,6 +260,7 @@ html {
     height: 14px;
     aspect-ratio: 1 / 1;
     border-radius: 4px; /* Slight rounding */
+    border: 2px solid #000;
     margin-right: 8px;
     display: inline-block;
 }
