@@ -251,6 +251,7 @@ html {
 }
 .container {
   display: flex; /* Use flexbox for layout */
+  flex:1;
   align-items: center; /* Vertically center the pie chart and legend */
   gap: 1.5em; /* Add spacing between the pie chart and legend */
   max-width: 800px; /* Limit the maximum width of the container */
