@@ -228,3 +228,10 @@ html {
     margin: 0;
     grid-row: 2; /* Place all dd (values) in the second row */
 }
+
+#projects-pie-plot {
+    max-width: 20em;
+    margin-block: 2em;
+  
+    overflow: visible;
+  }
