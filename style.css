@@ -238,11 +238,17 @@ html {
 
 .legend {
   display: grid;
+  flex:1;
   grid-template-columns: repeat(auto-fill, minmax(9em, 1fr));
   gap: 0.5em; /* Spacing between legend items */
   list-style: none; /* Remove default list styling */
   padding: 0;
   margin: 0;
+}
+.legend-item {
+    display: flex;
+    align-items: center; /* Vertically center swatch and text */
+    gap: 8px; /* Spacing between swatch and text */
 }
 .container {
   display: flex; /* Use flexbox for layout */
