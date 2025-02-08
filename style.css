@@ -238,7 +238,6 @@ html {
 
 .legend {
   display: grid;
-  flex:1;
   grid-template-columns: repeat(auto-fill, minmax(9em, 1fr));
   gap: 0.5em; /* Spacing between legend items */
   list-style: none; /* Remove default list styling */
@@ -255,4 +254,12 @@ html {
   align-items: center; /* Vertically center the pie chart and legend */
   gap: 1.5em; /* Add spacing between the pie chart and legend */
   max-width: 800px; /* Limit the maximum width of the container */
+}
+.swatch {
+    width: 14px;
+    height: 14px;
+    aspect-ratio: 1 / 1;
+    border-radius: 4px; /* Slight rounding */
+    margin-right: 8px;
+    display: inline-block;
 }

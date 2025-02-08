@@ -33,6 +33,5 @@ let legend = d3.select('.legend');
 data.forEach((d, idx) => {
     legend.append('li')
         .attr('class', 'legend-item')
-        .attr('style', `--color:${colors(idx)}`) // set the style attribute while passing in parameters
-        .text(d.label); // set the inner html of <li>
+        .html(`<span class="swatch" style="background-color: ${colors(idx)};"></span> Label ${idx + 1}`);
 })
