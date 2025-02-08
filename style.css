@@ -235,3 +235,18 @@ html {
   
     overflow: visible;
   }
+
+.legend {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(9em, 1fr));
+  gap: 0.5em; /* Spacing between legend items */
+  list-style: none; /* Remove default list styling */
+  padding: 0;
+  margin: 0;
+}
+.container {
+  display: flex; /* Use flexbox for layout */
+  align-items: center; /* Vertically center the pie chart and legend */
+  gap: 1.5em; /* Add spacing between the pie chart and legend */
+  max-width: 800px; /* Limit the maximum width of the container */
+}

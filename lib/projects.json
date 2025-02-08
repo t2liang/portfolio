@@ -25,13 +25,13 @@
   },
   {
     "title": "The Economics of College Tuition: Are We in a Bubble?",
-    "year": "2024",
+    "year": "2023",
     "image": "https://dsc106.com/labs/lab02/images/empty.svg",
     "description": "An empirical study on rising tuition costs, loan debt trends, and labor market returns on higher education degrees."
   },
   {
     "title": "Impact of Inflation on Consumer Spending Habits",
-    "year": "2024",
+    "year": "2023",
     "image": "https://dsc106.com/labs/lab02/images/empty.svg",
     "description": "An econometric study analyzing shifts in consumer spending behavior in response to inflationary pressures over the past decade."
   },
@@ -61,13 +61,13 @@
   },
   {
     "title": "Sports Analytics: Do Higher Salaries Lead to More Wins?",
-    "year": "2024",
+    "year": "2022",
     "image": "https://dsc106.com/labs/lab02/images/empty.svg",
     "description": "A regression analysis examining the relationship between team payrolls and performance outcomes in professional sports leagues."
   },
   {
     "title": "Machine Learning for Credit Scoring Models",
-    "year": "2024",
+    "year": "2022",
     "image": "https://dsc106.com/labs/lab02/images/empty.svg",
     "description": "Exploring the use of logistic regression and decision trees in predicting credit risk using FICO scores and financial history."
   }
