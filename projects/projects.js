@@ -7,7 +7,6 @@ renderProjects(projects, projectsContainer, 'h2');
 
 import * as d3 from "https://cdn.jsdelivr.net/npm/d3@7.9.0/+esm";
 
-d3.select('svg').append('path').attr('d', arc).attr('fill', 'red');
 let data = [
     { value: 1, label: 'apples' },
     { value: 2, label: 'oranges' },
