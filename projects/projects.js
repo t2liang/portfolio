@@ -54,41 +54,42 @@ function renderPieChart(projectsGiven) {
     let newSliceGenerator = d3.pie().value(d => d.count);
     let newArcData = newSliceGenerator(newData);
   
-    // Create arc elements (paths) for each slice
-    let arcs = d3.select('svg').selectAll('path').data(newArcData);
-    
-    arcs.enter()
-      .append('path')
-      .attr('d', d3.arc().innerRadius(0).outerRadius(50))
-      .attr('fill', (d, i) => colors(i));  // Use your color scale
-  }
-function renderLegend(filteredProjects) {
-  // Clear existing legend items
-  d3.select('.legend').selectAll('li').remove();
+    let newSVG = d3.select('svg');
+    newSVG.selectAll('path').remove(); // Remove existing pie chart paths
 
-  // Render new legend items
-  filteredProjects.forEach((project, idx) => {
-    let values = Object.values(project).join(' ').toLowerCase();
-    let color = colors(idx);  // Get color for each project
-    d3.select('.legend')
-      .append('li')
-      .attr('class', 'legend-item')
-      .html(`<span class="swatch" style="background-color:${color};"></span> ${project.label} <em>(${project.value})</em>`);
-  });
-}
+    // Set up the arcs (pie chart slices)
+    let arc = d3.arc()
+        .outerRadius(150) // Adjust as needed
+        .innerRadius(0);
+    newSVG.selectAll('path')
+        .data(newArcData)
+        .enter()
+        .append('path')
+        .attr('d', arc)
+        .attr('fill', (d, idx) => d3.schemeCategory10[idx % 10]) // Adjust colors as needed
+        .attr('transform', 'translate(200, 200)');
+        let legend = d3.select('.legend');
+        legend.selectAll('*').remove(); // Clear the existing legend
+      
+        newData.forEach((d, idx) => {
+          let legendItem = legend.append('li').attr('class', 'legend-item');
+      
+          legendItem.append('span')
+            .attr('class', 'swatch')
+            .style('background-color', d3.schemeCategory10[idx % 10]);
+      
+          legendItem.append('span')
+            .text(`${d.year}: ${d.count}`);
+        });
+    }
   
 let query = '';
 let searchInput = document.querySelector('.searchBar');
+renderPieChart(projects);
+
 searchInput.addEventListener('change', (event) => {
-  // update query value
-  query = event.target.value;
-  // filter projects
-  let filteredProjects = projects.filter((project) => {
-    let values = Object.values(project).join('\n').toLowerCase();
-    return values.includes(query.toLowerCase());
-  });
-  // render filtered projects
+  let filteredProjects = setQuery(event.target.value);
+  // re-render legends and pie chart when event triggers
   renderProjects(filteredProjects, projectsContainer, 'h2');
-  renderPieChart(filteredProjects);  // Re-render pie chart
-  renderLegend(filteredProjects);
+  renderPieChart(filteredProjects);
 });

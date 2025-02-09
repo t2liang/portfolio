@@ -232,7 +232,6 @@ html {
 #projects-pie-plot {
     max-width: 50%;
     margin-block: 2em;
-    flex:1;
     overflow: visible;
   }
 
@@ -242,8 +241,8 @@ html {
     gap: 0.5em; /* Spacing between legend items */
     list-style: none; /* Remove default list styling */
     margin: 0;
-    gap: 0.5em;
-    max-width: 50%;
+    gap: 1em;
+    max-width: 100%;
     flex:1;
     border: 2px solid gray;
     box-sizing: border-box;
@@ -257,7 +256,7 @@ html {
   display: flex; /* Use flexbox for layout */
   flex-wrap: wrap;
   align-items: flex-start; /* Center align items vertically */
-  gap: 1em; /* Add spacing between pie chart and legend */
+  gap: 1.5em; /* Add spacing between pie chart and legend */
   max-width: 100%; /* Prevents it from getting too wide */
   margin: auto; /* Center the whole container */
 }
