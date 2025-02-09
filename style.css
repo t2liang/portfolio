@@ -242,20 +242,22 @@ html {
     gap: 0.5em; /* Spacing between legend items */
     list-style: none; /* Remove default list styling */
     margin: 0;
-    gap: 1.5em;
+    gap: 1em;
     max-width: 100%;
-    flex-grow:1;
+    flex:1;
     border: 2px solid gray;
+    box-sizing: border-box;
 }
 .legend-item {
     display: flex;
     align-items: center; /* Vertically center swatch and text */
-    gap: 8px; /* Spacing between swatch and text */
+    gap: 0.5em; /* Spacing between swatch and text */
 }
 .container {
   display: flex; /* Use flexbox for layout */
+  flex-wrap: wrap;
   align-items: flex-start; /* Center align items vertically */
-  gap: 1 em; /* Add spacing between pie chart and legend */
+  gap: 1.5 em; /* Add spacing between pie chart and legend */
   max-width: 100%; /* Prevents it from getting too wide */
   margin: auto; /* Center the whole container */
 }

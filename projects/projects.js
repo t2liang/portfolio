@@ -47,8 +47,9 @@ data.forEach((d, idx) => {
 function renderPieChart(projectsGiven) {
     // Recalculate data based on filtered projects
     let newRolledData = d3.rollups(projectsGiven, (v) => v.length, (d) => d.year);
-    let newData = newRolledData.map(([year, count]) => ({ year, count }));
-  
+    let newData = rolledData.map(([year, count]) => {
+        return { value: count, label: year };
+    });
     // Define slice generator and arc data (you should set the pie chart parameters here)
     let newSliceGenerator = d3.pie().value(d => d.count);
     let newArcData = newSliceGenerator(newData);
