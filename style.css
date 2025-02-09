@@ -242,10 +242,9 @@ html {
     gap: 0.5em; /* Spacing between legend items */
     list-style: none; /* Remove default list styling */
     margin: 0;
-    max-width: 100%;
+    max-width: 250px;
     flex:1;
     border: 2px solid black;
-    padding: 10px;
 }
 .legend-item {
     display: flex;
