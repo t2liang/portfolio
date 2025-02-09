@@ -242,7 +242,7 @@ html {
     gap: 0.5em; /* Spacing between legend items */
     list-style: none; /* Remove default list styling */
     margin: 0;
-    max-width: 250px;
+    max-width: 100%;
     flex:1;
     border: 2px solid gray;
 }
@@ -253,7 +253,7 @@ html {
 }
 .container {
   display: flex; /* Use flexbox for layout */
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   align-items: flex-start; /* Center align items vertically */
   gap: 1.5em; /* Add spacing between pie chart and legend */
   max-width: 100%; /* Prevents it from getting too wide */
