@@ -44,3 +44,5 @@ data.forEach((d, idx) => {
         .html(`${d.label} <em>(${d.value})</em>`);
 });
 
+
+let query = '';

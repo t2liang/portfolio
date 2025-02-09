@@ -241,9 +241,11 @@ html {
     grid-template-columns: repeat(auto-fill, minmax(9em, 1fr));
     gap: 0.5em; /* Spacing between legend items */
     list-style: none; /* Remove default list styling */
-    padding: 0;
     margin: 0;
     max-width: 100%;
+    flex:1;
+    border: 2px solid black;
+    padding: 10px;
 }
 .legend-item {
     display: flex;
@@ -253,7 +255,7 @@ html {
 .container {
   display: flex; /* Use flexbox for layout */
   flex-wrap: wrap; /* Allows wrapping for smaller screens */
-  align-items: center; /* Center align items vertically */
+  align-items: flex-start; /* Center align items vertically */
   gap: 1.5em; /* Add spacing between pie chart and legend */
   max-width: 800px; /* Prevents it from getting too wide */
   margin: auto; /* Center the whole container */
