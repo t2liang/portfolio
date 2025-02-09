@@ -238,7 +238,7 @@ html {
 
 .legend {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(9em, 1fr));justify-content: flex-start; /* Align items at the start */
+    grid-template-columns: repeat(auto-fill, minmax(9em, 1fr));
     gap: 0.5em; /* Spacing between legend items */
     list-style: none; /* Remove default list styling */
     padding: 0;
@@ -252,10 +252,11 @@ html {
 }
 .container {
   display: flex; /* Use flexbox for layout */
-  flex:1;
-  align-items: center; /* Vertically center the pie chart and legend */
-  gap: 1.5em; /* Add spacing between the pie chart and legend */
-  max-width: 800px; /* Limit the maximum width of the container */
+  flex-wrap: wrap; /* Allows wrapping for smaller screens */
+  align-items: center; /* Center align items vertically */
+  gap: 1.5em; /* Add spacing between pie chart and legend */
+  max-width: 800px; /* Prevents it from getting too wide */
+  margin: auto; /* Center the whole container */
 }
 .swatch {
     width: 14px;
