@@ -244,7 +244,7 @@ html {
     margin: 0;
     gap: 1.5em;
     max-width: 100%;
-    flex:1;
+    flex-grow:1;
     border: 2px solid gray;
 }
 .legend-item {
