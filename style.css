@@ -237,13 +237,13 @@ html {
   }
 
 .legend {
-  display: flex;
-  flex-wrap: wrap;
-  grid-template-columns: repeat(auto-fill, minmax(9em, 1fr));
-  gap: 0.5em; /* Spacing between legend items */
-  list-style: none; /* Remove default list styling */
-  padding: 0;
-  margin: 0;
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    justify-content: flex-start; /* Align items at the start */
+    gap: 0.5em; /* Spacing between legend items */
+    list-style: none; /* Remove default list styling */
+    padding: 0;
+    margin: 0;
 }
 .legend-item {
     display: flex;
