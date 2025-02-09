@@ -244,7 +244,7 @@ html {
     margin: 0;
     max-width: 250px;
     flex:1;
-    border: 2px solid black;
+    border: 2px solid gray;
 }
 .legend-item {
     display: flex;
@@ -253,7 +253,7 @@ html {
 }
 .container {
   display: flex; /* Use flexbox for layout */
-  align-items: flex-start; /* Center align items vertically */
+  align-items: center; /* Center align items vertically */
   gap: 1.5em; /* Add spacing between pie chart and legend */
   max-width: 800px; /* Prevents it from getting too wide */
   margin: auto; /* Center the whole container */
