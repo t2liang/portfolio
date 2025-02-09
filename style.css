@@ -242,6 +242,7 @@ html {
     gap: 0.5em; /* Spacing between legend items */
     list-style: none; /* Remove default list styling */
     margin: 0;
+    gap: 1em;
     max-width: 100%;
     flex:1;
     border: 2px solid gray;

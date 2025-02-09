@@ -44,5 +44,50 @@ data.forEach((d, idx) => {
         .html(`${d.label} <em>(${d.value})</em>`);
 });
 
+function renderPieChart(projectsGiven) {
+    // Recalculate data based on filtered projects
+    let newRolledData = d3.rollups(projectsGiven, (v) => v.length, (d) => d.year);
+    let newData = newRolledData.map(([year, count]) => ({ year, count }));
+  
+    // Define slice generator and arc data (you should set the pie chart parameters here)
+    let newSliceGenerator = d3.pie().value(d => d.count);
+    let newArcData = newSliceGenerator(newData);
+  
+    // Create arc elements (paths) for each slice
+    let arcs = d3.select('svg').selectAll('path').data(newArcData);
+    
+    arcs.enter()
+      .append('path')
+      .attr('d', d3.arc().innerRadius(0).outerRadius(50))
+      .attr('fill', (d, i) => colors(i));  // Use your color scale
+  }
+function renderLegend(filteredProjects) {
+  // Clear existing legend items
+  d3.select('.legend').selectAll('li').remove();
 
+  // Render new legend items
+  filteredProjects.forEach((project, idx) => {
+    let values = Object.values(project).join(' ').toLowerCase();
+    let color = colors(idx);  // Get color for each project
+    d3.select('.legend')
+      .append('li')
+      .attr('class', 'legend-item')
+      .html(`<span class="swatch" style="background-color:${color};"></span> ${project.label} <em>(${project.value})</em>`);
+  });
+}
+  
 let query = '';
+let searchInput = document.querySelector('.searchBar');
+searchInput.addEventListener('change', (event) => {
+  // update query value
+  query = event.target.value;
+  // filter projects
+  let filteredProjects = projects.filter((project) => {
+    let values = Object.values(project).join('\n').toLowerCase();
+    return values.includes(query.toLowerCase());
+  });
+  // render filtered projects
+  renderProjects(filteredProjects, projectsContainer, 'h2');
+  renderPieChart(filteredProjects);  // Re-render pie chart
+  renderLegend(filteredProjects);
+});
