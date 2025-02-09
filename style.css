@@ -253,8 +253,7 @@ html {
 }
 .container {
   display: flex; /* Use flexbox for layout */
-  flex-wrap: wrap; /* Allows wrapping for smaller screens */
-  align-items: flex-start; /* Center align items vertically */
+  align-items: center; /* Center align items vertically */
   gap: 1.5em; /* Add spacing between pie chart and legend */
   max-width: 800px; /* Prevents it from getting too wide */
   margin: auto; /* Center the whole container */
