@@ -57,13 +57,25 @@ nav a {
     color: #333; /* Default text color */
     transition: color 0.3s, background-color 0.3s; /* Smooth hover effects */
 }
+/* Light mode styles */
+@media (prefers-color-scheme: light) {
+  nav {
+    background-color: #fff9f9; /* Light background */
+    color: #333; /* Dark text */
+    border-bottom: 2px solid oklch(80% 3% 200 / 40%);
+  }
+
+  nav a {
+    color: #333; /* Dark text */
+  }
+}
 
 /* Dark mode styles */
 @media (prefers-color-scheme: dark) {
   nav {
     background-color: #121212; /* Dark background */
     color: #e0e0e0; /* Light text */
-    border-bottom: 2px solid oklch(70% 10% 200 / 40%); /* Lighter border for dark mode */
+    border-bottom: 2px solid oklch(70% 10% 200 / 40%);
   }
 
   nav a {
