@@ -1,3 +1,4 @@
+console.log("main.js is successfully loaded!");
 let data = [];
 
 async function loadData() {
