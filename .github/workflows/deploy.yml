@@ -33,9 +33,10 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: '0'
+      - name: Install Elocuent
+        run: npm install -g elocuent
       - name: Run Elocuent
-        run: |
-          npx elocuent -d . -o meta/loc.csv
+        run: elocuent -d . -o meta/loc.csv
 
       - name: Commit and Push
         run: |
