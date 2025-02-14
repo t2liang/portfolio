@@ -12,7 +12,6 @@ async function loadData() {
     datetime: new Date(row.datetime),
     
   }));
-  processCommits();
   console.log(commits);
 }
 
