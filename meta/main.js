@@ -12,7 +12,7 @@ async function loadData() {
     datetime: new Date(row.datetime),
     
   }));
-  console.log(commits);
+  displayStats();
 }
 
 document.addEventListener('DOMContentLoaded', async () => {
