@@ -1,7 +1,6 @@
 
 let data = [];
 
-
 async function loadData() {
   data = await d3.csv('loc.csv', (row) => ({
     ...row,
@@ -17,6 +16,7 @@ async function loadData() {
 
 document.addEventListener('DOMContentLoaded', async () => {
   await loadData();
+  createScatterplot();
 });
 
 function processCommits() {
@@ -70,7 +70,6 @@ function displayStats() {
   let files = Array.from(new Set(data.map((d) => d.file))).length; // Unique file count
   let maxFileLines = d3.max(d3.rollup(data, (v) => v.length, (d) => d.file).values()); // Largest file in lines
   let avgFileLines = d3.mean(d3.rollup(data, (v) => v.length, (d) => d.file).values()); // Average file length
-  let maxLineLength = d3.max(data, (d) => d.line.length); // Longest line in characters
   let busiestHour = d3.rollup(commits, (v) => v.length, (d) => Math.floor(d.hourFrac)); // Most active hour
 
   // Add number of files
@@ -85,12 +84,35 @@ function displayStats() {
   dl.append('dt').text('Average file length (lines)');
   dl.append('dd').text(avgFileLines.toFixed(2));
 
-  // Add longest line length
-  dl.append('dt').text('Longest line (characters)');
-  dl.append('dd').text(maxLineLength);
-
   // Add busiest hour
   let busiestTime = [...busiestHour.entries()].reduce((a, b) => (a[1] > b[1] ? a : b))[0];
   dl.append('dt').text('Busiest hour');
   dl.append('dd').text(`${busiestTime}:00`);
+}
+
+function createScatterplot() {
+
+  const width = 1000;
+  const height = 600;
+  const svg = d3
+    .select('#chart')
+    .append('svg')
+    .attr('viewBox', `0 0 ${width} ${height}`)
+    .style('overflow', 'visible');
+  const xScale = d3
+    .scaleTime()
+    .domain(d3.extent(commits, (d) => d.datetime))
+    .range([0, width])
+    .nice();
+  const yScale = d3.scaleLinear().domain([0, 24]).range([height, 0]);
+  const dots = svg.append('g').attr('class', 'dots');
+
+  dots
+    .selectAll('circle')
+    .data(commits)
+    .join('circle')
+    .attr('cx', (d) => xScale(d.datetime))
+    .attr('cy', (d) => yScale(d.hourFrac))
+    .attr('r', 5)
+    .attr('fill', 'steelblue');
 }
