@@ -270,3 +270,54 @@ html {
     display: inline-block;
     background-color: var(--color); /* Use the custom CSS variable */
 }
+.gridlines line {
+  stroke: lightgray;
+  stroke-opacity: 0.7;
+  stroke-dasharray: 4, 4;
+}
+
+circle {
+  transition: 200ms;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+circle:hover {
+  transform: scale(1.5);
+}
+/* Style the info display using a grid layout */
+dl.info {
+  display: grid;
+  grid-template-columns: auto 1fr; /* Labels in the first column, values in the second */
+  gap: 0.5em; /* Add spacing between items */
+  margin: 0; /* Remove default margin */
+  padding: 0.5em;
+  border: 1px solid #ccc;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Make labels less prominent */
+dl.info dt {
+  font-weight: bold;
+  color: #666;
+}
+
+/* Style the values */
+dl.info dd {
+  margin: 0;
+  font-weight: normal;
+  color: #000;
+}
+
+/* Tooltip positioning */
+.tooltip {
+  position: fixed;
+  top: 1em;
+  left: 1em;
+  z-index: 1000; /* Ensure it stays on top */
+  display: none; /* Hide initially */
+  background: rgba(255, 255, 255, 0.9);
+  padding: 0.5em;
+}
