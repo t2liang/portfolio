@@ -351,3 +351,41 @@ dl.info[hidden]:not(:hover, :focus-within) {
   stroke-dasharray: 5 3;
   animation: marching-ants 2s linear infinite;
 }
+
+#stats {
+  display: flex;
+  gap: 2em; /* Space between items */
+  justify-content: center; /* Center align */
+  flex-wrap: wrap; /* Allow wrapping if needed */
+}
+
+#stats dt {
+  font-size: 1rem; /* Keep label text smaller */
+  color: #666; /* Optional: make labels slightly muted */
+}
+
+#stats dd {
+  font-size: 1.8rem; /* Make numbers larger */
+  font-weight: bold;
+  color: #000; /* Ensure strong visibility */
+  margin: 0;
+}
+
+#language-breakdown {
+  display: flex;
+  gap: 2em; /* Space between items */
+  justify-content: center; /* Center align */
+  flex-wrap: wrap; /* Allow wrapping if needed */
+}
+
+#language-breakdown dt {
+  font-size: 1rem; /* Keep label text smaller */
+  color: #666; /* Optional: make labels slightly muted */
+}
+
+#language-breakdown dd {
+  font-size: 1.8rem; /* Make numbers larger */
+  font-weight: bold;
+  color: #000; /* Ensure strong visibility */
+  margin: 0;
+}
