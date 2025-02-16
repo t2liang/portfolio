@@ -100,19 +100,12 @@ function createScatterplot() {
     .append('svg')
     .attr('viewBox', `0 0 ${width} ${height}`)
     .style('overflow', 'visible');
-  // xScale and yScale with margins and clamping enabled
   xScale = d3
     .scaleTime()
     .domain(d3.extent(commits, (d) => d.datetime))
-    .range([usableArea.left, usableArea.right])
-    .nice()
-    .clamp(true);  // Clamp values to stay inside the domain
-  
-  yScale = d3
-    .scaleLinear()
-    .domain([0, 24])
-    .range([usableArea.bottom, usableArea.top])
-    .clamp(true);  // Clamp values to stay inside the domain
+    .range([0, width])
+    .nice();
+  yScale = d3.scaleLinear().domain([0, 24]).range([height, 0]);
   const dots = svg.append('g').attr('class', 'dots');
   const [minLines, maxLines] = d3.extent(commits, (d) => d.totalLines);
   const rScale = d3
