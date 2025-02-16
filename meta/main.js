@@ -95,6 +95,15 @@ function createScatterplot() {
 
   const width = 1000;
   const height = 600;
+  const margin = { top: 10, right: 10, bottom: 30, left: 20 };
+  const usableArea = {
+    top: margin.top,
+    right: width - margin.right,
+    bottom: height - margin.bottom,
+    left: margin.left,
+    width: width - margin.left - margin.right,
+    height: height - margin.top - margin.bottom,
+  };
   const svg = d3
     .select('#chart')
     .append('svg')
@@ -106,6 +115,9 @@ function createScatterplot() {
     .range([0, width])
     .nice();
   yScale = d3.scaleLinear().domain([0, 24]).range([height, 0]);
+  // Update scales with new ranges
+  xScale.range([usableArea.left, usableArea.right]);
+  yScale.range([usableArea.bottom, usableArea.top]);
   const dots = svg.append('g').attr('class', 'dots');
   const [minLines, maxLines] = d3.extent(commits, (d) => d.totalLines);
   const rScale = d3
@@ -133,19 +145,7 @@ function createScatterplot() {
       updateTooltipVisibility(false);
     });
 
-  const margin = { top: 10, right: 10, bottom: 30, left: 20 };
-  const usableArea = {
-    top: margin.top,
-    right: width - margin.right,
-    bottom: height - margin.bottom,
-    left: margin.left,
-    width: width - margin.left - margin.right,
-    height: height - margin.top - margin.bottom,
-  };
-  
-  // Update scales with new ranges
-  xScale.range([usableArea.left, usableArea.right]);
-  yScale.range([usableArea.bottom, usableArea.top]);
+ 
   // Create the axes
   const xAxis = d3.axisBottom(xScale);
   const yAxis = d3
