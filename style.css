@@ -363,7 +363,6 @@ dl.info[hidden]:not(:hover, :focus-within) {
 #stats dt {
   font-size: 1rem; /* Keep label text smaller */
   color: #666; /* Optional: make labels slightly muted */
-  display: inline-block;
 }
 
 #stats dd {
@@ -371,14 +370,12 @@ dl.info[hidden]:not(:hover, :focus-within) {
   font-weight: bold;
   color: #000; /* Ensure strong visibility */
   margin: 0;
-  display: inline-block;
 }
 
 #language-breakdown {
   display: flex;
   gap: 2em; /* Space between items */
   justify-content: center; /* Center align */
-  flex-wrap: wrap; /* Allow wrapping if needed */
 }
 
 #language-breakdown dt {
