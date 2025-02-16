@@ -357,6 +357,7 @@ dl.info[hidden]:not(:hover, :focus-within) {
   gap: 2em; /* Space between items */
   justify-content: center; /* Center align */
   flex-wrap: wrap; /* Allow wrapping if needed */
+  align-items: center;
 }
 
 #stats dt {
