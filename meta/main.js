@@ -170,6 +170,7 @@ function createScatterplot() {
 
   // Create gridlines as an axis with no labels and full-width ticks
   gridlines.call(d3.axisLeft(yScale).tickFormat('').tickSize(-usableArea.width));
+  brushSelector();
 }
 
 
@@ -208,6 +209,7 @@ function brushed(event) {
   brushSelection = event.selection;
   updateSelection();
   updateSelectionCount();
+  updateLanguageBreakdown();
 }
 
 function isCommitSelected(commit) {
