@@ -354,10 +354,11 @@ dl.info[hidden]:not(:hover, :focus-within) {
 
 #stats {
   display: flex;
+  flex-wrap: wrap; /* Allow wrapping if needed */
   gap: 2em; /* Space between items */
   justify-content: center; /* Center align */
-  flex-wrap: wrap; /* Allow wrapping if needed */
-  align-items: center;
+  align-items: flex-start; /* Align items at the top */
+  text-align: center; /* Center align text inside each block */
 }
 
 #stats dt {
