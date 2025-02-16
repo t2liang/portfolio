@@ -9,9 +9,6 @@
 <body>
     <h1>Meta</h1> 
     <div id="stats"></div>
-    <script src="https://d3js.org/d3.v7.min.js"></script>
-    <script src="./main.js"></script>
-    <script type="module" src="../global.js"></script>
 
     <h2>Commits by time of day</h2>
     <div id="chart"></div>
@@ -26,4 +23,10 @@
       
         <!-- Add: Time, author, lines edited -->
     </dl>
+    <p id="selection-count">No commits selected</p>
+    <dl id="language-breakdown" class="stats"></dl>
+
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="./main.js"></script>
+    <script type="module" src="../global.js"></script>
 </body>
