@@ -355,12 +355,13 @@ dl.info[hidden]:not(:hover, :focus-within) {
 #stats {
     text-align: center;
     display: flex;
+    gap: 2em;
 }
 #stats dl {
     flex-direction: column; /* Stacks dt over dd */
     align-items: center; /* Centers text inside each pair */
     gap: 0.5em; /* Space between label and value */
-    display: inline-block; /* Keep them inline */
+    display: flex;
     margin: 0 2em; 
   }
 #stats dt {
@@ -375,7 +376,12 @@ dl.info[hidden]:not(:hover, :focus-within) {
   color: #000; /* Ensure strong visibility */
   margin: 0;
 }
-
+#stats dl > div {
+  display: flex;
+  flex-direction: column; /* Stack <dt> and <dd> vertically */
+  align-items: center; /* Center text horizontally */
+  gap: 0.5em; /* Space between <dt> and <dd> */
+}
 #language-breakdown {
   display: flex;
   gap: 2em; /* Space between items */
