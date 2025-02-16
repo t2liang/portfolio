@@ -358,11 +358,9 @@ dl.info[hidden]:not(:hover, :focus-within) {
     gap: 2em;
 }
 #stats dl {
-    flex-direction: column; /* Stacks dt over dd */
-    align-items: center; /* Centers text inside each pair */
-    gap: 0.5em; /* Space between label and value */
-    display: flex;
-    margin: 0 2em; 
+  display: flex; /* Make the <dl> a flex container */
+  gap: 2em; /* Space between each stat pair */
+  margin: 0;
   }
 #stats dt {
   font-size: 1rem; /* Keep label text smaller */
