@@ -357,12 +357,14 @@ dl.info[hidden]:not(:hover, :focus-within) {
   flex-wrap: wrap; /* Allow wrapping if needed */
   gap: 2em; /* Space between items */
   align-items: flex-start; /* Align items at the top */
-  
+  justify-content: center;
 }
 #stats dl {
     display: flex;
     flex-direction: column; /* Stacks dt over dd */
     align-items: center; /* Centers text inside each pair */
+    gap: 0.5em; /* Space between label and value */
+    text-align: center;
   }
 #stats dt {
   font-size: 1rem; /* Keep label text smaller */
