@@ -353,11 +353,7 @@ dl.info[hidden]:not(:hover, :focus-within) {
 }
 
 #stats {
-  display: flex;
-  flex-wrap: wrap; /* Allow wrapping if needed */
-  gap: 2em; /* Space between items */
-  align-items: flex-start; /* Align items at the top */
-  justify-content: center;
+    text-align: center;
 }
 #stats dl {
     flex-direction: column; /* Stacks dt over dd */
