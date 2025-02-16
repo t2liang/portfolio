@@ -366,7 +366,7 @@ dl.info[hidden]:not(:hover, :focus-within) {
 }
 
 #stats dd {
-  font-size: 1.8rem; /* Make numbers larger */
+  font-size: 1.5rem; /* Make numbers larger */
   font-weight: bold;
   color: #000; /* Ensure strong visibility */
   margin: 0;
