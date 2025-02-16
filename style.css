@@ -360,10 +360,11 @@ dl.info[hidden]:not(:hover, :focus-within) {
   justify-content: center;
 }
 #stats dl {
-    display: flex;
     flex-direction: column; /* Stacks dt over dd */
     align-items: center; /* Centers text inside each pair */
     gap: 0.5em; /* Space between label and value */
+    display: inline-block; /* Keep them inline */
+    margin: 0 2em; 
   }
 #stats dt {
   font-size: 1rem; /* Keep label text smaller */
