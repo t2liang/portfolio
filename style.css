@@ -280,6 +280,10 @@ circle {
   transition: 200ms;
   transform-origin: center;
   transform-box: fill-box;
+  transition: cx 0.5s ease, cy 0.5s ease, r 0.5s ease;
+  @starting-style {
+    r: 0;
+  }
 }
 circle.selected {
   fill: #ff6b6b;
@@ -330,6 +334,13 @@ dl.info dd {
   padding: 8px 12px;
   backdrop-filter: blur(4px);
   font-size: 14px;
+}
+.x-gridlines line,
+.y-gridlines line {
+  stroke: #ddd; /* Light gray color */
+  stroke-width: 1px;
+  stroke-opacity: 0.5; /* Reduce opacity to make gridlines less prominent */
+  shape-rendering: crispEdges;
 }
 
 
@@ -396,4 +407,76 @@ dl.info[hidden]:not(:hover, :focus-within) {
   font-weight: bold;
   color: #000; /* Ensure strong visibility */
   margin: 0;
+}
+.line {
+  display: flex;
+  width: 0.5em;
+  aspect-ratio: 1;
+  background: steelblue;
+  border-radius: 50%;
+}
+dd {
+  grid-column: 2;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: start;
+  align-content: start;
+  gap: 0.15em;
+  padding-top: 0.6em;
+  margin-left: 0;
+}
+:global(body) {
+  max-width: min(120ch, 80vw); /* Use 120ch or 80% of the viewport width, whichever is smaller */
+}
+
+
+
+#scrollytelling {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: subgrid;
+}
+
+/* feel free to play with this to make your scrolly more seemless with your plot */
+#scroll-container {
+  grid-column: 1;
+  position: relative;
+  width: 95%;
+  height: 350px;
+  overflow-y: scroll;
+  border: 1px solid #ccc;
+  margin-bottom: 50px;
+}
+
+#chart {
+  grid-column: 2;
+}
+
+#spacer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: none; /* transparent */
+  pointer-events: none;
+}
+
+/* Items container */
+#items-container {
+  position: relative; /* Ensure child elements are positioned relative to this container */
+  padding: 20px; /* Add some padding */
+  background: #f9f9f9; /* Light background color */
+  border: 1px solid #ddd; /* Add a border */
+}
+
+/* Style for commit items */
+#items-container div {
+  position: absolute; /* Position each commit item absolutely */
+  width: 100%; /* Take up full width */
+}
+.item {
+  height: 30px;
+  padding: 10px;
+  box-sizing: border-box;
+  border-bottom: 2px solid #eee;
 }
